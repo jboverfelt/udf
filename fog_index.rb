@@ -30,7 +30,7 @@ class FogIndex < PigUdf
     end
 
     def syllables word
-      word.split(/[^aeiouy]/).reject(&:empty?)
+      word.downcase.split(/[^aeiouy]/).reject(&:empty?)
     end
 
     def words text
