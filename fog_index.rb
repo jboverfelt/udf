@@ -1,5 +1,10 @@
 require 'pigudf'
 
+# Load this in Pig using something like the following:
+# register '/path/to/fog_index.rb' using jruby as fog;
+#
+# Then, in a GENERATE clause, call fog.index(a_chararray_field)
+
 class FogIndex < PigUdf
     outputSchema "index:chararray"
     def index text
